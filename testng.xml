@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="kartonline.TestComponents.Listeners" />
+	</listeners>
+	<test name="Register Functionality">
+		<classes>
+			<class name="kartonline.test.TS_001RegisterFunctionalityTest">
+				<methods>
+					<exclude name="TC_RF_002" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!--
+	Test -->
+	<test name="Login Functionality">
+		<classes>
+			<class name="kartonline.test.TS_002LoginFunctionalityTest" />
+		</classes>
+	</test>
+</suite> <!--
+Suite -->
