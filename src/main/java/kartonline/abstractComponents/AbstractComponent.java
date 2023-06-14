@@ -3,7 +3,7 @@ package kartonline.abstractComponents;
 import java.time.Duration;
 import java.util.List;
 
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,11 +11,25 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import kartonline.pageobject.CartPage;
+
+
 public class AbstractComponent {
 	private WebDriver driver;
 
 	public AbstractComponent(WebDriver driver) {
 		this.driver = driver;
+	}
+	
+	@FindBy(xpath = "//div[@class='nav float-end']//ul//li//a[@title='Shopping Cart']")
+	WebElement shoppingCartHeader;
+	
+	public CartPage goToCartPage() throws InterruptedException
+	{
+		scrollUp();
+		shoppingCartHeader.click();
+		CartPage cartPage = new CartPage(driver);
+		return cartPage;
 	}
 
 	// My Account drop menu
@@ -44,7 +58,11 @@ public class AbstractComponent {
 	
 	public void scrollDown() {
 		Actions actions = new Actions(driver);
-		actions.scrollByAmount(0, 200).perform();
+		actions.scrollByAmount(0, 500).perform();
+	}
+	public void scrollUp() {
+		Actions actions = new Actions(driver);
+		actions.scrollByAmount(0, -500).perform();
 	}
 
 	public void waitForElementToClickable(WebElement FindBy) {
@@ -60,5 +78,17 @@ public class AbstractComponent {
 	public void waitForElementsToVisible(List<WebElement> FindBy) {
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.visibilityOfAllElements(FindBy));
+	}
+	public void waitForElementToAppear(By findBy) {
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+		wait.until(ExpectedConditions.visibilityOfElementLocated(findBy));
+
+	}
+	public void waitForElementToDisappear(By findBy) {
+
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+		wait.until(ExpectedConditions.invisibilityOfElementLocated(findBy));
+
 	}
 }

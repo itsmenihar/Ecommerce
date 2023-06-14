@@ -1,0 +1,17 @@
+[
+{
+  "email" : "admin@gmail.com",
+  "password": "12345",
+  "headerName":"Phones & PDAs",
+  "productName" : "iPhone",
+  "message":"Your order has been placed!",
+  "firstname":"Nihar",
+  "lastname":"Sahu",
+  "company":"TCS",
+  "address_1":"Trident Galaxy",
+  "city":"BBSR",
+  "pincode":"751003"
+    
+}
+
+]

@@ -1,5 +1,7 @@
 package kartonline.pageobject;
 
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -67,6 +69,16 @@ public class HomePage extends AbstractComponent {
 		LogoutContinue.click();
 		LandingPage lp = new LandingPage(driver);
 		return lp;
+	}
+
+	// product cetagories
+	public ProductCataloguePage prodCetagories(String headerName) {
+		WebElement prodCategory = driver
+				.findElement(By.xpath("//div[@id='narbar-menu']//ul//li//a[text()='" + headerName + "']"));
+		waitForElementToDisplay(prodCategory);
+		prodCategory.click();
+		ProductCataloguePage pc = new ProductCataloguePage(driver);
+		return pc;
 	}
 
 }
