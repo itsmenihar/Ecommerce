@@ -3,13 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="kartonline.test.TS_003LogoutFunctionalityTest">
+      <class name="kartonline.test.OrderProduct">
         <methods>
-          <include name="TC_LG_003"/>
+          <include name="submitOrder" invocation-numbers="0"/>
           <include name="launchApplication"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- kartonline.test.TS_003LogoutFunctionalityTest -->
+      </class> <!-- kartonline.test.OrderProduct -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

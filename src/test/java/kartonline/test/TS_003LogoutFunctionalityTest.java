@@ -23,7 +23,7 @@ public class TS_003LogoutFunctionalityTest extends BaseTest {
 		Assert.assertEquals(title, "Your Store");
 	}
 
-	// Validate Logging out by selecting Logout option from 'Right Column' options
+	// Validate Logging out by selecting Logout option from 'Right Column'
 	@Test
 	public void TC_LG_002() throws InterruptedException {
 		LoginPage loginPage = lp.getLogin();
