@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>
+		<listener class-name="kartonline.TestComponents.Listeners" />
+	</listeners>
+	<test name="Purchase Order">
+		<classes>
+			<class name="kartonline.test.OrderProductTest" />
+		</classes>
+	</test> <!--
+	Test -->
+</suite> <!--
+Suite -->

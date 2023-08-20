@@ -17,7 +17,7 @@ import kartonline.pageobject.HomePage;
 import kartonline.pageobject.LoginPage;
 import kartonline.pageobject.ProductCataloguePage;
 
-public class OrderProduct extends BaseTest {
+public class OrderProductTest extends BaseTest {
 	WebDriver driver;
 //	String headerName = "Phones & PDAs";
 //	String productName = "iPhone";
