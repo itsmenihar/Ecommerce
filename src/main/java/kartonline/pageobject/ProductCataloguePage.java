@@ -12,7 +12,7 @@ import kartonline.abstractComponents.AbstractComponent;
 
 public class ProductCataloguePage extends AbstractComponent {
 
-	WebDriver driver;
+	public WebDriver driver;
 
 	public ProductCataloguePage(WebDriver driver) {
 		super(driver);

@@ -19,5 +19,10 @@
 			<class name="kartonline.test.TS_002LoginFunctionalityTest" />
 		</classes>
 	</test>
+	<test name="Logout Functionality">
+		<classes>
+			<class name="kartonline.test.TS_003LogoutFunctionalityTest" />
+		</classes>
+	</test>
 </suite> <!--
 Suite -->
